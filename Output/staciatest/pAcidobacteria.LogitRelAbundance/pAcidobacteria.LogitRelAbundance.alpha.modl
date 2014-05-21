@@ -1,0 +1,17 @@
+NUMBER_OF_PARAMETERS,STATISTIC,VALUE_LogitRelAbundance,MODEL_LogitRelAbundance
+0,PRESS,5.905647309704173,(Intercept Only)
+0,Cross Validation R^2,0.0,(Intercept Only)
+0,R^2,0.0,(Intercept Only)
+0,Adjusted R^2,0.0,(Intercept Only)
+1,PRESS,5.217452771861979,preMomeanCRU
+1,Cross Validation R^2,0.11653160132189921,preMomeanCRU
+1,R^2,0.21527059000162108,preMomeanCRU
+1,Adjusted R^2,0.1882109551740908,preMomeanCRU
+2,PRESS,3.767047328415583,tmpMomeanCRU;wetMomeanCRU
+2,Cross Validation R^2,0.3621279546738996,--> tmpMomeanCRU;wetMomeanCRU
+2,R^2,0.47570227880081106,tmpMomeanCRU;wetMomeanCRU
+2,Adjusted R^2,0.4382524415722976,tmpMomeanCRU;wetMomeanCRU
+3,PRESS,3.7855425025883345,tmpMomeanCRU;frsMomeanCRU;wetMomeanCRU
+3,Cross Validation R^2,0.35899617703754116,tmpMomeanCRU;frsMomeanCRU;wetMomeanCRU
+3,R^2,0.48117829720712435,preMomeanCRU;tmpMomeanCRU;wetMomeanCRU
+3,Adjusted R^2,0.4235314413412493,preMomeanCRU;tmpMomeanCRU;wetMomeanCRU
