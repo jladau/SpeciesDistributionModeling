@@ -9,4 +9,4 @@ This software uses ecological niche modeling (Fierer and Ladau, 2012, Nature Met
 
 (iii) Model projection: once suitable models have been found, the models are projected into geographic space using rasters of the environmental predictors. The maps are output in NetCDF format, viewable using software tools such as Panoply (http://www.giss.nasa.gov/tools/panoply).
 
-The shell script 'SpeciesDistributionModelingTEst.sh' runs an example data set and check for errors with the installation. Addition documentation on the software is available in the file 'doc/index.html'. All source code is located the 'SpeciesDistributionModeling' and 'Shared' directories at https://github.com/jladau/Source.
+The shell script 'SpeciesDistributionModelingTest.sh' runs an example data set and check for errors with the installation. Addition documentation on the software is available in the file 'doc/index.html'. All source code is located the 'SpeciesDistributionModeling' and 'Shared' directories at https://github.com/jladau/Source.
