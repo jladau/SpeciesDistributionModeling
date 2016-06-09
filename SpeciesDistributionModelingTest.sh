@@ -5,6 +5,22 @@ sDir=$HOME/Documents/Research/Java/Distribution/SpeciesDistributionModeling
 rm -f -r $sDir/test/output
 mkdir $sDir/test/output
 
+#outputting list of acceptable variables from MESS output (MESS output modified with sed command for this example so there are usable variables)
+#sed 's/false$/true/g' $sDir/test/output/TestOutput.MESS.csv | grep "true$" | cut -d\, -f1 | sed 's/:/\,/g' > $sDir/test/output/RasterList.MESS.csv
+#code to use in non-example analyses:
+#grep "true$" $sDir/test/output/TestOutput.MESS.csv | cut -d\, -f1 | sed 's/:/\,/g' > $sDir/test/output/RasterList.MESS.csv
+
+#running model selection
+echo 'Running model selection...'
+echo ''
+java -cp bin/SpeciesDistributionModeling.jar edu.ucsf.ModelSelector.ModelSelectorLauncher --sBIOMPath=$sDir/test/TestData.biom --sRasterListPath=$sDir/test/RasterList.csv --sResponseVarsListPath=$sDir/test/ResponseVariables.csv --sOutputPath=$sDir/test/output/TestOutput.ModelSelection.csv
+echo ''
+echo ''
+
+#projecting maps
+echo 'Projecting maps...'
+echo ''
+java -cp bin/SpeciesDistributionModeling.jar edu.ucsf.ModelProjector.ModelProjectorLauncher --sOutputDir=$sDir/test/output --sSelectedModelsPath=$sDir/test/output/TestOutput.ModelSelection.csv --sResponseVarsListPath=$sDir/test/ResponseVariables.csv --sBIOMPath=$sDir/test/TestData.biom
 
 #running MESS analysis
 cd $sDir
@@ -14,23 +30,6 @@ echo ''
 java -cp bin/SpeciesDistributionModeling.jar edu.ucsf.MESS.MESSLauncher --sBIOMPath=$sDir/test/TestData.biom --sOutputPath=$sDir/test/output/TestOutput.MESS.nc --sRasterListPath=$sDir/test/RasterList.csv --bOutputTable=true --bOutputMap=true
 echo ''
 echo ''
-
-#outputting list of acceptable variables from MESS output (MESS output modified with sed command for this example so there are usable variables)
-sed 's/false$/true/g' $sDir/test/output/TestOutput.MESS.csv | grep "true$" | cut -d\, -f1 | sed 's/:/\,/g' > $sDir/test/output/RasterList.MESS.csv
-#code to use in non-example analyses:
-#grep "true$" $sDir/test/output/TestOutput.MESS.csv | cut -d\, -f1 | sed 's/:/\,/g' > $sDir/test/output/RasterList.MESS.csv
-
-#running model selection
-echo 'Running model selection...'
-echo ''
-java -cp bin/SpeciesDistributionModeling.jar edu.ucsf.ModelSelector.ModelSelectorLauncher --sBIOMPath=$sDir/test/TestData.biom --sRasterListPath=$sDir/test/output/RasterList.MESS.csv --sResponseVarsListPath=$sDir/test/ResponseVariables.csv --sOutputPath=$sDir/test/output/TestOutput.ModelSelection.csv
-echo ''
-echo ''
-
-#projecting maps
-echo 'Projecting maps...'
-echo ''
-java -cp bin/SpeciesDistributionModeling.jar edu.ucsf.ModelProjector.ModelProjectorLauncher --sOutputDir=$sDir/test/output --sSelectedModelsPath=$sDir/test/output/TestOutput.ModelSelection.csv --sResponseVarsListPath=$sDir/test/ResponseVariables.csv
 
 echo ''
 echo ''
