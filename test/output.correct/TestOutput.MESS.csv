@@ -1,3 +1,6 @@
 PREDICTOR_VARIABLE,DATE,VERT,FRACTION_AREA_GREATER_THAN_MESS_-20,ACCEPTABLE
-/home/jladau/Documents/Research/Java/Distribution/SpeciesDistributionModeling/test/Latitude.nc:Latitude,na,na,0.02690015796144894,false
-/home/jladau/Documents/Research/Java/Distribution/SpeciesDistributionModeling/test/Longitude.nc:Longitude,na,na,0.012499999999994979,false
+Latitude_MESS,9999-09-09,1.7976931348623157E308,NaN,false
+Latitude_MESS_overall,9999-09-09,1.7976931348623157E308,NaN,false
+Longitude_MESS,9999-09-09,1.7976931348623157E308,NaN,false
+Longitude_MESS_overall,9999-09-09,1.7976931348623157E308,NaN,false
+MESS_overall,9999-09-09,1.7976931348623157E308,NaN,false
