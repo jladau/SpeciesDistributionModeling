@@ -14,7 +14,9 @@ The shell script 'SpeciesDistributionModelingTest.sh' runs an example data set a
 ##Dependencies
 This software requires Java Runtime Environment (JRE) version 1.6 or greater. On many Apple systems, even if JRE 1.6 or greater is installed, the default version for running applications may be 1.5. The Java version can be checked by typing 'java -version' into a terminal Window. To update the version, you might try typing the following commands into a terminal window:
 
+<pre><code>
 sudo rm /usr/bin/java
 sudo ln -s /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java /usr/bin
+</code></pre>
 
 Additional information on correcting the Java version can be found here: http://stackoverflow.com/questions/12757558/installed-java-7-on-mac-os-x-but-terminal-is-still-using-version-6
