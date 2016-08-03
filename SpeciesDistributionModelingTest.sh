@@ -46,7 +46,7 @@ java -cp bin/SpeciesDistributionModeling.jar edu.ucsf.MESS.MESSLauncher --sOutpu
 echo ''
 
 #converting output files to linux format
-sed -i'' "s|\r|\n|g" $sDir/test/output/*.csv
+#sed -i "s|\r|\n|g" $sDir/test/output/*.csv
 
 echo '******************************************************'
 echo 'Validating output...'
