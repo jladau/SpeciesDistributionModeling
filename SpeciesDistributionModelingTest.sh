@@ -115,8 +115,8 @@ rm -f test/output.correct/*temp.csv
 #MESS
 for i in {1..5}
 do
-	cut -d\, -f$i test/output/TestOutput.MESS.csv | cut -c1-8 >> test/output/TestOutput.MESS.0temp.csv
-	cut -d\, -f$i test/output.correct/TestOutput.MESS.csv | cut -c1-8 >> test/output.correct/TestOutput.MESS.0temp.csv
+	sed "s|$sDir|CurDir|g" test/output/TestOutput.MESS.csv  | cut -d\, -f$i | cut -c1-8 >> test/output/TestOutput.MESS.0temp.csv
+	sed "s|$sDir|CurDir|g" test/output.correct/TestOutput.MESS.csv | cut -d\, -f$i | cut -c1-8 >> test/output.correct/TestOutput.MESS.0temp.csv
 done
 sort test/output/TestOutput.MESS.0temp.csv > test/output/TestOutput.MESS.temp.csv
 sort test/output.correct/TestOutput.MESS.0temp.csv > test/output.correct/TestOutput.MESS.temp.csv
