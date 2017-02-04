@@ -1,2 +1,3 @@
-sDir/test/Latitude.nc
-sDir/test/Longitude.nc
+RASTER_PATH,VARIABLE,TRANSFORM,TRAINING_DATE
+sDir/test/Latitude.nc,Latitude,identity,2000-12-31
+sDir/test/Longitude.nc,Longitude,identity,2000-12-31
