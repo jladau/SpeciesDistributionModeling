@@ -11,7 +11,7 @@ This software uses ecological niche modeling (Fierer and Ladau, 2012, Nature Met
 
 The shell script 'SpeciesDistributionModelingTest.sh' runs an example data set and check for errors with the installation. Addition documentation on the software is available in the file 'doc/index.html'. All source code is located the 'SpeciesDistributionModeling' and 'Shared' directories at https://github.com/jladau/JavaSource.
 
-##Dependencies
+## Dependencies
 This software requires Java Runtime Environment (JRE) version 1.6 or greater. On many Apple systems, even if JRE 1.6 or greater is installed, the default version for running applications may be 1.5. The Java version can be checked by typing 'java -version' into a terminal. If an updated version is installed but is not being used, a few updates will need to be made; namely you might try typing the following commands in a terminal:
 
 <pre><code>
